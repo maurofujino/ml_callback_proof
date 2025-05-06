@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Callback Proof</title>
+</head>
+<body>
+  <h1>Redirecionado com sucesso!</h1>
+  <p>Aguarde... estamos processando sua autorização.</p>
+
+  <script>
+    const query = new URLSearchParams(window.location.search);
+    const code = query.get('code');
+
+    if (code) {
+      console.log("Authorization code:", code);
+      // Aqui você pode armazenar ou enviar esse código para seu backend
+    } else {
+      console.log("Nenhum código de autorização recebido.");
+    }
+  </script>
+</body>
+</html>
